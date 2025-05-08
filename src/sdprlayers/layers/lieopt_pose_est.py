@@ -1,5 +1,4 @@
 import numpy as np
-import theseus as th
 import torch
 import torch.nn as nn
 
@@ -29,6 +28,7 @@ class LieOptPoseEstimator(nn.Module):
 
         # SET UP THESEUS OPTIMIZATION
         # Optimization variables
+        import theseus as th
         T_trg_src = th.SE3(name="T_trg_src")
         # Auxillary (data) variables (pixel keypoints_3D_trgurements and landmarks)
         keypoints_3D_trg = th.Variable(

@@ -5,7 +5,6 @@ from time import time
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import theseus as th
 import torch
 from poly_matrix import PolyMatrix
 from pylgmath.so3.operations import vec2rot
@@ -296,6 +295,7 @@ def build_theseus_layer(N_map, N_batch=1, opt_kwargs_in={}):
         r_l (_type_): _description_
         pixel_meas (_type_): _description_
     """
+    import theseus as th
     # Optimization variables
     r_p0s = th.Point3(name="r_p0s")
     C_p0s = th.SO3(name="C_p0s")
